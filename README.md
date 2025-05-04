@@ -16,7 +16,7 @@ The **SocioDiff Dataset** aims to support research in energy consumption forecas
 Each sample in the dataset consists of:
 
 * **Input**: socio-demographic features (e.g., income level, household size, education, age group, etc.)
-* **Output**: a daily electricity load time series of 96 time steps (15-minute intervals for one day)
+* **Output**: a daily electricity load time series of 336 time steps (30-minute intervals for one week)
 
 The dataset is generated using a conditional diffusion model trained on a proprietary dataset of 4,000 households collected over 3 years. For privacy reasons, the original data is not released. This synthetic version mimics its statistical characteristics without leaking private information.
 
