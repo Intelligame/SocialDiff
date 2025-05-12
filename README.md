@@ -73,6 +73,42 @@ Each row represents a synthetic weekly electricity consumption profile for one h
 * The fields `load_t0` to `load_t335` represent **336 consecutive load measurements**, each spaced at **30-minute intervals**, covering a full **7-day period** (48 points per day × 7 days).
 
 
+
+## 🛠️ How to Use the Dataset
+
+This dataset is designed to support downstream tasks such as residential load forecasting, fairness-aware modeling, and social behavior analysis. Below is a guide on how to use it effectively:
+
+### 1. Load Forecasting Task
+
+To use the dataset for short-term or day-ahead load forecasting:
+
+* Treat `load_t0` to `load_t287` (first 6 days) as input
+* Predict `load_t288` to `load_t335` (7th day)
+* Optionally include socio-demographic fields as auxiliary inputs
+
+### 2. Suggested Preprocessing
+
+* Convert categorical attributes to one-hot or embedding indices if using neural networks
+* Denormalize load values if needed (currently values are normalized to \[0, 1])
+* Apply sliding windows if you wish to create multiple overlapping samples per household
+
+### 3. Example Use Case (PyTorch-style input)
+
+```python
+import pandas as pd
+data = pd.read_csv("generated_data/pred_data.csv")
+
+X_social = data[['social', 'age', 'alone', 'employment', 'income']]
+X_load = data[[f'load_t{i}' for i in range(288)]]
+y_load = data[[f'load_t{i}' for i in range(288, 336)]]
+```
+
+This format allows you to train models that predict future electricity usage conditioned on both historical consumption and socio-demographic context.
+
+---
+
+
+
 ## 📜 License
 
 This dataset is released under the **CC BY-NC 4.0** License. You are free to use, adapt, and share it for **non-commercial research purposes**, provided that you cite the original paper.
