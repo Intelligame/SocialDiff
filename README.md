@@ -96,7 +96,7 @@ To use the dataset for short-term or day-ahead load forecasting:
 
 ```python
 import pandas as pd
-data = pd.read_csv("generated_data/pred_data.csv")
+data = pd.read_csv("generated_data/pred_data_.csv")
 
 X_social = data[['social', 'age', 'alone', 'employment', 'income']]
 X_load = data[[f'load_t{i}' for i in range(288)]]
