@@ -89,7 +89,7 @@ To use the dataset for short-term or day-ahead load forecasting:
 ### 2. Suggested Preprocessing
 
 * Convert categorical attributes to one-hot or embedding indices if using neural networks
-* Denormalize load values if needed (currently values are normalized to \[0, 1])
+* Normalize load values if needed
 * Apply sliding windows if you wish to create multiple overlapping samples per household
 
 ### 3. Example Use Case (PyTorch-style input)
