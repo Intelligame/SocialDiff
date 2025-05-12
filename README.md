@@ -48,7 +48,7 @@ The following socio-demographic attributes are used in SocioDiff for conditional
 
 ---
 
-These socio-demographic features are extracted from the **[RESIDENTIAL PRE TRIAL SURVEY](https://github.com/Intelligame/SocialDiff/RESIDENTIAL%20PRE%20TRIAL%20SURVEY.doc)**, which was conducted as part of the Irish CER Smart Metering Project. The survey collected detailed information on household composition, income, employment, and other social attributes before the metering trial. This structured metadata provides a reliable foundation for conditioning the generative model and ensuring that the resulting synthetic load profiles reflect real-world demographic diversity.
+These socio-demographic features are extracted from the **[RESIDENTIAL PRE TRIAL SURVEY](https://github.com/Intelligame/SocialDiff/blob/main/RESIDENTIAL%20PRE%20TRIAL%20SURVEY.doc)**, which was conducted as part of the Irish CER Smart Metering Project. The survey collected detailed information on household composition, income, employment, and other social attributes before the metering trial. This structured metadata provides a reliable foundation for conditioning the generative model and ensuring that the resulting synthetic load profiles reflect real-world demographic diversity.
 
 ## 🧪 Generation Method
 
